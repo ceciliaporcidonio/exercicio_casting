@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
+public class ConversaoPrimitivos {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Leitura de um número decimal do console (tipo double)
+        // Leitura de um número decimal do console (tipo primitivo double)
         System.out.print("Digite um número decimal: ");
         double numeroDecimal = scanner.nextDouble();
 
-        // Casting para um tipo inteiro (int)
-        int numeroInteiro = (int) numeroDecimal;
+        // Conversão do tipo primitivo double para o wrapper Double
+        Double numeroWrapper = Double.valueOf(numeroDecimal);
 
-        // Imprimindo os valores antes e depois do casting
+        // Imprimindo os valores antes e depois da conversão
         System.out.println("Número original (double): " + numeroDecimal);
-        System.out.println("Número após o casting para int: " + numeroInteiro);
+        System.out.println("Número após a conversão para o wrapper Double: " + numeroWrapper);
 
         // Fechar o scanner
         scanner.close();
